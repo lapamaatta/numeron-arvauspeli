@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvauspeli</title>
+    <script src="Tehtävä2.js"></script>
+    <style>
+        body{
+            background-color:rgb(244, 172, 143);
+        }
+        h1{
+            text-align: center;
+            color:darkred;
+            text-shadow: 1px 1px 1px;
+        }
+        h2{
+            text-align: center;
+            color:darkred;
+            text-shadow: 1px 1px 1px;
+        }
+        .lomake{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label{
+            font-size: 25px;
+            color:darkred;
+            text-shadow: 1px 1px 1px;
+        }
+        input{
+            width: 300px;
+            font-size: 20px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        button{
+            font-size: 25px;
+            color:darkred;
+            text-shadow: 1px 1px 1px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Numeron Arvauspeli</h1>
+    <div class="lomake">
+        <button type="button" onclick="play()" id="playButton">Pelaa!</button>
+        <label for="guess" style="display: none;" id="guessLabel">Arvaus</label><br>
+        <input type="number" style="display: none;" name="guess" id="guess" placeholder="Syötä arvauksesi (1-1000)"><br>
+        <button type="button" style="display: none;" onclick="guess()" id="guessButton">Arvaa!</button>
+
+        <h2 id="response"></h2>
+
+        <h1 id="highscore"></h1>
+    </div>
+</body>
+</html>
